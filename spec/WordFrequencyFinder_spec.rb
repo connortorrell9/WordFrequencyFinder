@@ -6,5 +6,8 @@ describe "word frequency finder" do
     it "with file with no line breaks" do
       expect(word_frequency_finder.new("file.txt").file_to_string).to eq("Hello Connor, you are very cool Connor. Yes you are, Connor, very very cool. Hello my dude.")
     end
+    it "with file with line breaks" do
+      expect(word_frequency_finder.new("file2.txt").file_to_string).to eq("Hello Connor, you are very cool Connor. Yes you are, Connor, very very cool. Hello my dude.")
+    end
   end
 end

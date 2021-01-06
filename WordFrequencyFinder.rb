@@ -8,7 +8,7 @@ class WordFrequencyFinder
         file = File.open(@file_name)
         content = file.read
         file.close
-        content
+        content.sub("\n", " ")
     end
 
 end
