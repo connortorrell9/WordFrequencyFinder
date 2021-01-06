@@ -8,11 +8,11 @@ class WordFrequencyFinder
         file = File.open(@file_name)
         content = file.read
         file.close
-        content.sub("\n", " ").tr(".,!?", "")
+        content.sub("\n", " ")
     end
 
     def count_words(string)
-        words = string.split
+        words = string.tr(".,!?", "").split
         frequency = Hash.new(0)
         words.each { |word| frequency[word.downcase] += 1 }
         frequency

@@ -12,7 +12,7 @@ describe "word frequency finder" do
   end
   context "returns hash from file" do
     it "correctly" do
-      expect(word_frequency_finder.new("file.txt").run).to eq({"hello"=>2, "connor,"=>2, "you"=>2, "are"=>1, "very"=>3, "cool"=>1, "connor."=>1, "yes"=>1, "are,"=>1, "cool."=>1, "my"=>1, "dude."=>1})
+      expect(word_frequency_finder.new("file.txt").run).to eq({"are"=>2, "connor"=>3, "cool"=>2, "dude"=>1, "hello"=>2, "my"=>1, "very"=>3, "yes"=>1, "you"=>2})
     end
   end
 end
