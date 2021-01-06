@@ -8,7 +8,7 @@ class WordFrequencyFinder
         file = File.open(@file_name)
         content = file.read
         file.close
-        content.sub("\n", " ")
+        content.sub("\n", " ").tr(".,!?", "")
     end
 
     def count_words(string)
